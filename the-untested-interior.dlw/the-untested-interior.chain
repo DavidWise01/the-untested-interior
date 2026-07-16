@@ -1,0 +1,9 @@
+ROOT0-DLW-CHAIN-v1
+index : 1421
+slug  : the-untested-interior
+seal  : 4bbb5ade62aa0410e409a78b4ba49fb7f326c631aba55331cf38389727deac97
+prev  : 9ade70fb6c13306e1ee78c279f35c7473cb57fa5769b448fac79944b9e1c4abd
+link  : 108db3d019bc196328dbbd3b957e87db635ec5eef39e5cd08e10a67c270a71ef
+head  : 108db3d019bc196328dbbd3b957e87db635ec5eef39e5cd08e10a67c270a71ef
+
+— the tether: link = sha256(index|slug|seal|prev). the chain head commits to the whole corpus.
