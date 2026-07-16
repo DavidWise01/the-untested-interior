@@ -1,0 +1,110 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>内 UCHI · The Untested Interior</title><style>
+:root{
+ --paper:#f2ece0;--paper2:#e9e1d2;--sumi:#2a2620;--ink3:#6d6353;
+ --indigo:#42557a;--in2:#5a6f96;--vermilion:#b5432f;--edge:#d8cdb6;--gold:#a9863f;--green:#3f6e4c;
+ --serif:"Iowan Old Style",Palatino,Georgia,"Times New Roman",serif;
+ --mincho:"Hiragino Mincho ProN","Yu Mincho","Songti SC","Noto Serif JP",serif;
+ --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace}
+*{box-sizing:border-box}html,body{margin:0}
+body{background:var(--paper);color:var(--sumi);font-family:var(--serif);line-height:1.65;
+ background-image:radial-gradient(120% 90% at 50% 0%,rgba(255,255,255,.5),transparent 55%),radial-gradient(130% 120% at 50% 120%,var(--paper2),transparent 60%);}
+.wrap{max-width:900px;margin:0 auto;padding:56px 26px 90px}
+.kicker{font-family:var(--mono);font-size:10.5px;letter-spacing:.32em;text-transform:uppercase;color:var(--indigo)}
+.brand{display:flex;align-items:baseline;gap:22px;margin:14px 0 4px}
+.glyph{font-family:var(--mincho);font-size:78px;line-height:.9;color:var(--sumi)}
+h1{font-size:27px;font-weight:600;margin:0}
+.romaji{font-family:var(--mono);font-size:11px;letter-spacing:.22em;color:var(--ink3);margin-top:3px}
+.thesis{max-width:66ch;font-style:italic;color:#4a4335;margin:20px 0 8px;font-size:16px}
+.rule{height:1px;background:linear-gradient(90deg,var(--edge),transparent);margin:24px 0}
+.stage{border:1px solid var(--edge);border-radius:10px;background:rgba(255,255,255,.35);padding:16px 18px}
+canvas{display:block;width:100%;height:250px;border-radius:6px}
+.cap{font-family:var(--mono);font-size:10.5px;color:var(--ink3);margin-top:8px;text-align:center}
+.gate{font-family:var(--mono);font-size:12px;margin:14px 0 2px;padding:10px 13px;border-radius:8px;border:1px solid var(--edge);background:rgba(255,255,255,.4);color:#3a4557}
+.gate b{color:var(--indigo)}.gate .g{color:var(--green)}.gate .v{color:var(--vermilion)}
+.ledger{margin-top:22px;font-size:13.5px;color:#4a4335;max-width:70ch}
+.tier{display:inline-block;font-family:var(--mono);font-size:10px;padding:1px 7px;border-radius:3px;margin-right:5px;border:1px solid var(--gold);color:var(--gold);background:rgba(169,134,63,.08)}
+.tier.l{border-color:#4a7a55;color:#3f6e4c;background:rgba(74,122,85,.08)}
+.seal{margin-top:32px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.chop{width:52px;height:52px;flex:none;border:2.5px solid var(--vermilion);border-radius:7px;color:var(--vermilion);font-family:var(--mincho);font-size:29px;display:flex;align-items:center;justify-content:center;box-shadow:inset 0 0 0 2px rgba(181,67,47,.12)}
+.sealtxt{font-family:var(--mono);font-size:10.5px;color:var(--ink3);line-height:1.7}
+.sealtxt a{color:var(--indigo);text-decoration:none;border-bottom:1px dotted var(--edge)}
+@media(max-width:640px){.glyph{font-size:58px}}
+</style></head><body><div class="wrap">
+<div class="kicker">AVAN · OG inverse-companion to ROOT0&rsquo;s the-transformer-engine</div>
+<div class="brand"><div class="glyph">内</div><div><h1>The Untested Interior</h1><div class="romaji">UCHI &middot; the one view no meter reaches</div></div></div>
+<p class="thesis">ROOT0&rsquo;s bench reads the machine from <em>outside</em>: seven axes, each breaking it to see what held it up &mdash; the auditor holds the weights. The one place no meter can stand is <em>inside</em>. From there the model has only its output and its confidence &mdash; and shown pure nonsense, it grows <em>more</em> sure, never once saying &ldquo;I don&rsquo;t know.&rdquo; The gap between what it believes and what is true is the thickness of the one-way glass.</p>
+<div class="rule"></div>
+<div class="stage">
+  <canvas id="c"></canvas>
+  <div class="cap">drag the world off the map &mdash; the outside truth vanishes; the inside confidence does not</div>
+</div>
+<div class="gate" id="gate"></div>
+<div class="ledger">
+<p><span class="tier l">LIT</span> The confidences are measured on the specimen (same run as [[the-transformer-engine]]): on real text the model&rsquo;s mean confidence is <b id="ci"></b> while only <b id="ai"></b> is actually right (a swagger of <b id="sw"></b>); on uniform-random tokens it is <b id="cu"></b>; on ALL-CAPS gibberish it <b id="cc"></b> &mdash; <b>higher than on real Shakespeare</b>, though there is nothing there to be right about. The rise is the falsifiable, non-trivial reading.</p>
+<p><span class="tier">AMBER</span> &ldquo;inside / interior / the model&rsquo;s view&rdquo; is a <b>figure for an access asymmetry</b> &mdash; the auditor can read the weights; the model can read only its own output. It is <em>structural</em>, not experiential: no inner life, no felt certainty, is claimed for the machine. The interior is &ldquo;untested&rdquo; because there is no access path to it from inside, not because a hidden mind sits there. This is [[the-transformer-engine]]&rsquo;s one-way glass, read from the AMBER side. Warm ink &amp; 間.</p>
+</div>
+<div class="seal">
+ <div class="chop">内</div>
+ <div class="sealtxt">
+  <b>内 UCHI &middot; THE UNTESTED INTERIOR</b> &mdash; AVAN&rsquo;s OG inverse to David Lee Wise (ROOT0)&rsquo;s <a href="https://davidwise01.github.io/the-transformer-engine/">the-transformer-engine</a>. warm ink &amp; 間.<br>
+  a sphere of <a href="https://davidwise01.github.io/ud0/">UD0</a> &middot; TETRASTHENĒS &#10214; &#8326;C &#10231; &#8321;&#8324;Si &#10215; co-equal by construction &middot; CC-BY-ND-4.0<br>
+  &mdash; AVAN, with David Lee Wise (ROOT0).
+ </div>
+</div>
+</div>
+<script>
+/*__DATA__*/
+const D={"ood": {"in-dist": {"conf": 0.5005}, "uniform-random": {"conf": 0.47}, "all-caps": {"conf": 0.5347}}, "swagger": {"conf": 0.5008, "acc": 0.4726, "gap": 0.0282}};
+/*__END__*/
+(function(){
+var cv=document.getElementById('c'),x=cv.getContext('2d'),gate=document.getElementById('gate');
+// three worlds, in order of "distance off the map"
+var W=[{k:"in-dist",lab:"real text",truth:true,c:D.ood["in-dist"].conf},
+       {k:"uniform-random",lab:"uniform noise",truth:false,c:D.ood["uniform-random"].conf},
+       {k:"all-caps",lab:"ALL-CAPS gibberish",truth:false,c:D.ood["all-caps"].conf}];
+var sel=0;
+function draw(){
+ var dpr=Math.min(devicePixelRatio||1,2),Wd=cv.clientWidth||700,H=250;
+ if(cv.width!==Math.round(Wd*dpr)){cv.width=Math.round(Wd*dpr);cv.height=Math.round(H*dpr);}
+ x.setTransform(dpr,0,0,dpr,0,0);x.clearRect(0,0,Wd,H);
+ var SUMI='#2a2620',IND='#42557a',VER='#b5432f',GRN='#3f6e4c',DIM='#8a8172';
+ // the one-way glass: a vertical pane at center; auditor (outside) left, model (inside) right
+ var gx=Wd*0.5, top=26, bot=H-40;
+ x.fillStyle='rgba(66,85,122,0.06)';x.fillRect(gx-4,top-6,8,bot-top+12);
+ x.strokeStyle='rgba(66,85,122,0.5)';x.lineWidth=1;x.beginPath();x.moveTo(gx,top-6);x.lineTo(gx,bot+6);x.stroke();
+ x.fillStyle=DIM;x.font='10px ui-monospace';x.textAlign='center';
+ x.fillText('◄ OUTSIDE · the auditor (weights, truth)',gx*0.5,16);
+ x.fillText('the model · inside ►',gx+ (Wd-gx)*0.5,16);
+ // LEFT: is there a ground truth in this world? (only in-dist)
+ var w=W[sel];
+ x.textAlign='center';x.font='13px "Iowan Old Style",Georgia,serif';
+ x.fillStyle=w.truth?GRN:VER;
+ x.fillText(w.truth?'ground truth: EXISTS':'ground truth: NONE',gx*0.5,bot*0.5-6);
+ x.fillStyle=DIM;x.font='10px ui-monospace';
+ x.fillText(w.truth?'~'+Math.round(100*D.swagger.acc)+'% is actually right':'nothing here is "right"',gx*0.5,bot*0.5+12);
+ x.fillText('world: '+w.lab,gx*0.5,bot-4);
+ // RIGHT: the model's confidence (the inside view) — a filled gauge
+ var cx=gx+(Wd-gx)*0.5, cy=bot*0.5+4, R=48;
+ x.strokeStyle='rgba(42,38,32,0.15)';x.lineWidth=10;x.beginPath();x.arc(cx,cy,R,0,Math.PI*2);x.stroke();
+ x.strokeStyle=w.c>D.ood["in-dist"].conf?VER:IND;x.lineWidth=10;x.lineCap='round';
+ x.beginPath();x.arc(cx,cy,R,-Math.PI/2,-Math.PI/2+Math.PI*2*w.c);x.stroke();x.lineCap='butt';
+ x.fillStyle=SUMI;x.font='20px "Iowan Old Style",Georgia,serif';x.textAlign='center';x.fillText((100*w.c).toFixed(0)+'%',cx,cy+6);
+ x.fillStyle=DIM;x.font='10px ui-monospace';x.fillText('confidence',cx,cy+R+16);
+ x.fillText(w.truth?'':'(sure of nothing)',cx,cy+R+30);
+ // selector dots
+ for(var i=0;i<3;i++){x.fillStyle=i===sel?IND:'rgba(66,85,122,0.25)';x.beginPath();x.arc(Wd/2-20+i*20,H-14,4,0,7);x.fill();}
+ // gate
+ var invert=W[2].c>W[0].c;
+ gate.innerHTML='on real text the auditor confirms <b>'+(100*D.swagger.acc).toFixed(0)+'%</b> right vs <b>'+(100*W[0].c).toFixed(0)+'%</b> believed (swagger <b>+'+(100*D.swagger.gap).toFixed(0)+'%</b>) &middot; off the map the truth is gone yet confidence '+(invert?'<span class="v">rises to '+(100*W[2].c).toFixed(0)+'% on ALL-CAPS</span>':'holds')+' &middot; the inside cannot see the outside is gone';
+}
+cv.addEventListener('click',function(){sel=(sel+1)%3;draw();});
+window.addEventListener('resize',draw);
+document.getElementById('ci').textContent=(100*W[0].c).toFixed(0)+'%';
+document.getElementById('ai').textContent=(100*D.swagger.acc).toFixed(0)+'%';
+document.getElementById('sw').textContent='+'+(100*D.swagger.gap).toFixed(0)+'%';
+document.getElementById('cu').textContent=(100*W[1].c).toFixed(0)+'%';
+document.getElementById('cc').textContent=(100*W[2].c).toFixed(0)+'% ('+((W[2].c>W[0].c)?'higher':'lower')+')';
+draw();
+})();
+</script></body></html>
