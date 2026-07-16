@@ -41,7 +41,7 @@ canvas{display:block;width:100%;height:250px;border-radius:6px}
 </div>
 <div class="gate" id="gate"></div>
 <div class="ledger">
-<p><span class="tier l">LIT</span> The confidences are measured on the specimen (same run as [[the-transformer-engine]]): on real text the model&rsquo;s mean confidence is <b id="ci"></b> while only <b id="ai"></b> is actually right (a swagger of <b id="sw"></b>); on uniform-random tokens it is <b id="cu"></b>; on ALL-CAPS gibberish it <b id="cc"></b> &mdash; <b>higher than on real Shakespeare</b>, though there is nothing there to be right about. The rise is the falsifiable, non-trivial reading.</p>
+<p><span class="tier l">LIT</span> The confidences are measured on the specimen (same run as [[the-transformer-engine]]): on real text the model&rsquo;s mean confidence is <b id="ci"></b> while only <b id="ai"></b> is actually right (a swagger of <b id="sw"></b>); on uniform-random tokens it is <b id="cu"></b> (LOWER); on real text UPPERCASED it is <b id="cc"></b> &mdash; <b>higher (more peaked, lower entropy)</b> than mixed-case, though no accuracy is measured there, so this is peakedness, not proven over-confidence. The SPLIT is the falsifiable, non-trivial reading.</p>
 <p><span class="tier">AMBER</span> &ldquo;inside / interior / the model&rsquo;s view&rdquo; is a <b>figure for an access asymmetry</b> &mdash; the auditor can read the weights; the model can read only its own output. It is <em>structural</em>, not experiential: no inner life, no felt certainty, is claimed for the machine. The interior is &ldquo;untested&rdquo; because there is no access path to it from inside, not because a hidden mind sits there. This is [[the-transformer-engine]]&rsquo;s one-way glass, read from the AMBER side. Warm ink &amp; 間.</p>
 </div>
 <div class="seal">
@@ -62,7 +62,7 @@ var cv=document.getElementById('c'),x=cv.getContext('2d'),gate=document.getEleme
 // three worlds, in order of "distance off the map"
 var W=[{k:"in-dist",lab:"real text",truth:true,c:D.ood["in-dist"].conf},
        {k:"uniform-random",lab:"uniform noise",truth:false,c:D.ood["uniform-random"].conf},
-       {k:"all-caps",lab:"ALL-CAPS gibberish",truth:false,c:D.ood["all-caps"].conf}];
+       {k:"all-caps",lab:"real text, UPPERCASED",truth:false,c:D.ood["all-caps"].conf}];
 var sel=0;
 function draw(){
  var dpr=Math.min(devicePixelRatio||1,2),Wd=cv.clientWidth||700,H=250;
@@ -80,9 +80,9 @@ function draw(){
  var w=W[sel];
  x.textAlign='center';x.font='13px "Iowan Old Style",Georgia,serif';
  x.fillStyle=w.truth?GRN:VER;
- x.fillText(w.truth?'ground truth: EXISTS':'ground truth: NONE',gx*0.5,bot*0.5-6);
+ x.fillText(w.truth?'accuracy measured: YES':'accuracy measured: NO',gx*0.5,bot*0.5-6);
  x.fillStyle=DIM;x.font='10px ui-monospace';
- x.fillText(w.truth?'~'+Math.round(100*D.swagger.acc)+'% is actually right':'nothing here is "right"',gx*0.5,bot*0.5+12);
+ x.fillText(w.truth?'~'+Math.round(100*D.swagger.acc)+'% actually right':'confidence unverified here',gx*0.5,bot*0.5+12);
  x.fillText('world: '+w.lab,gx*0.5,bot-4);
  // RIGHT: the model's confidence (the inside view) — a filled gauge
  var cx=gx+(Wd-gx)*0.5, cy=bot*0.5+4, R=48;
